@@ -1,0 +1,218 @@
+input[type="text"] {
+    z-index: 9999; /* 设置一个较高的层叠顺序值 */
+  }
+  
+  #pencilIcon{
+    cursor: url("icon\\pencil-32.png") 0 100, auto; 
+  }
+  
+  #eraserIcon{
+    cursor: url("icon\\eraser-32.png") 5   120, auto; 
+  }
+  
+  #triangleIcon{
+    cursor: url("icon\\triangle-outline-32.png") , auto; 
+  }
+  
+  #rectangleIcon{
+    cursor: url("icon\\square-outline-32.png") , auto; 
+  }
+  
+  #circleIcon{
+    cursor: url("icon\\circle-outline-32.png") , auto; 
+  }
+  
+  #stickerIcon{
+    cursor: url("icon\\sticker.png") , auto; 
+  }
+  
+  #textIcon{
+    cursor: text; 
+  }
+  
+  input[type="range"] {
+    width: 190px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  /*-------------------調色盤----------------------------------*/
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+  }
+  h2 {
+    background-color: #dbdbdb;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-family: 'Open Sans';
+  }
+  #color-input {
+    display: none;
+  }
+  #color-label {
+    margin-left: 15px;
+    position: absolute;
+    left: 820px;
+    top: 23%;
+    height: 15px;
+    width: 190px;
+  } 
+  #color-input:checked ~ #color-picker {
+    opacity: 1;
+  }
+  #color-picker {
+    position: absolute;
+    left: 830px; 
+    top: 5px;
+    background-color: SaddleBrown;
+    height: 150px;
+    width: 185px;
+    border: solid 1px #ccc;
+    opacity: 0;
+    padding: 5px;
+    cursor:crosshair
+  }
+  /*canvas:hover {
+    cursor: crosshair;
+  }*/
+  /*-----------------------------------------------*/
+  /*--------button---------------------------------*/
+  .btn {
+    width: 180px;
+    line-height: 40px;
+    font-size: 20px;
+    color: PapayaWhip;
+    text-align: center;
+    background-color: Chocolate;
+    border: 5px solid SaddleBrown;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .1s;
+  }
+  
+  .btn:hover {
+    /* :hover 代表滑鼠移到元素上時的狀態 */ 
+    transform: scale(1.05);
+  }
+  
+  .btn:active {
+    /* :active是滑鼠點擊元素的狀態 */
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+  }
+  
+  .smallbtn {
+    width: 80px;
+    line-height: 40px;
+    font-size: 20px;
+    color: PapayaWhip;
+    text-align: center;
+    background-color: Chocolate;
+    border: 5px solid SaddleBrown;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .1s;
+  }
+  
+  .smallbtn:hover {
+    /* :hover 代表滑鼠移到元素上時的狀態 */ 
+    transform: scale(1.05);
+  }
+  
+  .smallbtn:active {
+    /* :active是滑鼠點擊元素的狀態 */
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+  }
+  
+  
+  /*--------------------------------------------------*/
+  
+  .news-filter select {
+    background: chocolate;
+    border: 2px solid SaddleBrown;
+    color: #fafafa;
+    margin: 15px;
+    width: 50px;
+    height: 25px;
+    padding: 5px;
+    position:absolute;
+    border-radius: 5px;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(#003d79, #003d79);
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -webkit-linear-gradient(#003d79, #003d79);
+    */
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M7%2010l5%205%205-5z%22%2F%3E%3C%2Fsvg%3E"), -moz-linear-gradient(#003d79, #003d79);
+    
+    background-position: right 0.5em top 50%, 0 0;
+    background-size: contain, cover;
+    background-repeat: no-repeat, repeat;
+  }
+  
+  option {
+    appearance: none;
+    background: SaddleBrown;
+    position: absolute ;
+  }
+  
+  #fontSizeInput {
+    width: 41px; /* 设置输入框宽度为200像素 */
+    height: 18px; /* 设置输入框高度为30像素 */
+    position: absolute;
+    left: 91px;
+    top: 542px;
+    border: 2px solid SaddleBrown;
+    background-color: chocolate;
+    color: white;
+    border-radius: 5px;
+    cursor:text;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      appearance: none;
+      margin: 0; /* 去除默认的内外边距 */
+  }
+  
+  input[type="file"] {
+    display:flex;
+  }
+  
+  /* 自定义文件上传按钮样式 */
+  .custom-file-input {
+    width: 80px;
+    line-height: 40px;
+    font-size: 20px;
+    color: PapayaWhip;
+    text-align: center;
+    background-color: Chocolate;
+    border: 5px solid SaddleBrown;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: .1s;
+    font-size: 0; /* 设置字体大小为0，隐藏文本 */
+    color: transparent; /* 隐藏文本颜色 */
+    padding: 0; /* 移除内边距 */
+    position: absolute;
+    top: 515px;
+    left: 625px;
+  }
+  .custom-file-input:hover {
+    /* :hover 代表滑鼠移到元素上時的狀態 */ 
+    transform: scale(1.05);
+  }
+  
+  .custom-file-input:active {
+    /* :active是滑鼠點擊元素的狀態 */
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+  }
+  

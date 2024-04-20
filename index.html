@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <canvas id="cvs" style="position: absolute; top: 0; left: 0; z-index: 1; background-color: white; 
+        border: 5px solid rgb(105, 9, 9);" width="800" height="500"></canvas>
+    <canvas id="cvs2" style="position: absolute; top: 0; left: 0; z-index: 2; background-color: transparent; border: 5px solid ;pointer-events: none;"
+        width="800" height="500"></canvas>
+    <div>
+        <div id="pen_eraser" style="position:absolute; left: 835px; top:190px;">
+            <div class="btn" id="penBtn" onclick="pen()" style="position: relative;">
+                <img src="icon\pencil.png" alt="Pen Icon"
+                    style="position: relative;left: 5px; top: 5px; width: 25px; height: 25px;">
+            </div>
+            <input type="range" id="brushSizeInput" min="1" max="30" value="5">
+            <div class="btn" id="eraserBtn" onclick="eraser()">
+                <img src="icon\eraser.png" alt="eraser Icon"
+                    style="position: relative;left: 5px; top: 5px; width: 25px; height: 25px;">
+            </div>
+            <input type="range" id="eraserSizeInput" min="1" max="30" value="5">
+        </div>
+        <div>
+            <div class="smallbtn" id="textBtn" style="position: absolute; left: 0px; top: 515px;">
+                <img src="icon\text2.png" alt="text Icon" style="position: relative;top: 5px;; width: 25px; height: 25px;">
+            </div>
+            <div class="news-filter" style="position: absolute; left: 75px;top: 500px;">
+                <select id="fontSelect">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="標楷體">標楷體</option>
+                    <option value="新細明體">新細明體</option>
+                    <option value="微軟正黑體">微軟正黑體</option>
+                </select>
+            </div>
+            <input type="number" id="fontSizeInput" value="16" min="1">
+        </div>
+        <div class="btn" id="resetBtn" style="position: absolute; left: 295px; top: 515px;">Reset</div>
+        <div class="smallbtn" id="undoBtn" style="position: absolute; left: 835px; top: 330px;">
+            <img src="icon\undo2.png" alt="undo Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+        </div>
+        <div class="smallbtn" id="redoBtn" style="position: absolute; left: 935px; top: 330px;">
+            <img src="icon\redo2.png" alt="redo Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+        </div>
+        <div class="smallbtn" onclick="upload()" style="position: absolute; top: 515px; left: 720px;">
+            <img src="icon\download.png" alt="upload Icon" style="position: relative; top: 5px; width: 25px; height: 25px;">
+        </div>
+        <div class="smallbtn" id="rectangleBtn" style="position:absolute; left: 835px; top:450px;">
+            <img src="icon\square.png" alt="rectangle Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+        </div>
+        <div class="smallbtn" id="triangleBtn" style="position:absolute; left: 935px; top:450px;">
+            <img src="icon\triangle.png" alt="triangle Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+        </div>
+        <div class="smallbtn" id="circleBtn" style="position:absolute; left: 935px; top:390px;">
+            <img src="icon\circle.png" alt="circle Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+        </div>
+        <input type="file" class="custom-file-input" onchange="loadfile(this)">
+        <label>
+            <input type="file" class="custom-file-input" onchange="loadfile(this)">
+            <img src="icon\upload2.png" alt="Upload" width="20" height="20"
+                style="position:absolute;top: 517px; left: 648px; width: 45px; height: 45px;">
+            <!-- 替换 'your-image-url.png' 为您的图像路径 -->
+        </label>
+        <a id="download"></a>
+        <!--調色盤-->
+        <div class="color_picker"  >
+            <label for="color-input" id="color-label" style="background-color: black"></label>
+            <input type="checkbox" id="color-input" checked></input>
+            <div id="color-picker">
+                <canvas id="color-block" height="150" width="150"></canvas>
+                <canvas id="color-strip" height="150" width="30"></canvas>
+            </div>
+        </div>
+
+        <div class="smallbtn" id="stickerBtn" style="position: absolute; left: 835px; top: 390px;">
+            <img src="icon\sticker2.png" alt="sticker Icon" style="position: relative; top: 5px; width: 30px; height: 30px;">
+        </div>
+    </div>
+    <div class="smallbtn" id="fillRect" style="position: absolute; left: 935px; top: 510px;">
+        <img src="icon\repeat.png" alt="repeat Icon" style="position: relative;top: 5px; width: 35px; height: 25px;">
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
